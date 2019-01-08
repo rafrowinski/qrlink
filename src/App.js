@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
 import data from './data'
 import './App.css';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { HashRouter as Router, Route } from "react-router-dom";
 const CryptoJS = require("crypto-js");
 
 class App extends Component {
   render() {
     return (
       <Router>
-        <Route path="/:id/:key" component={Decrypt} />
+        <div>
+          <Route path="/:id/:key" component={Decrypt} />
+        </div>
       </Router>
+
     );
   }
 }
